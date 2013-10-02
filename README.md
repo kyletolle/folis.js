@@ -75,6 +75,6 @@ useful if testing that the calling code times out after so many seconds.
 
 ### Write to file delay
 
-The server will currently wait 5 seconds after it receives the last request
-before it writes to a file. To change this delay, simply change
-`DISK_WRITE_DELAY`.
+The server currently waits 5 seconds after it receives the last request
+before it writes to a file. To make the server wait a different length of
+time, change `DISK_WRITE_DELAY` in the code.
