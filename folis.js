@@ -39,6 +39,7 @@ console.log();
 
 function sendRequestsToFile() {
   console.log("Writing requests to file");
-  fs.writeFileSync('requests.json', JSON.stringify(requests), null, 2);
+  fs.mkdirSync('tmp');
+  fs.writeFileSync('tmp/requests.json', JSON.stringify(requests), null, 2);
 
 }
