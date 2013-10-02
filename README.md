@@ -1,7 +1,7 @@
-polis.js
+folis.js
 ========
 
-Simple Node.js HTTP listener that logs POST contents to STDOUT.
+Simple Node.js HTTP listener that outputs POST contents to a file.
 
 Production
 ----------
@@ -11,7 +11,7 @@ Production
 Deploy to Heroku using the following steps:
 
 - Clone this repo
-- `cd polis.js`
+- `cd folis.js`
 - [Install the Heroku Toolbelt](https://toolbelt.heroku.com/)
 - `heroku login`
 - `heroku create`
@@ -37,7 +37,7 @@ something like:
 2013-09-19T19:39:52.998926+00:00 app[web.1]: { 'x-request-start': '1379619592981',
 2013-09-19T19:39:52.998926+00:00 app[web.1]:   'x-forwarded-proto': 'https',
 2013-09-19T19:39:52.998926+00:00 app[web.1]:   'x-forwarded-for': '75.71.173.170',
-2013-09-19T19:39:52.998926+00:00 app[web.1]:   host: 'polisjs.herokuapp.com',
+2013-09-19T19:39:52.998926+00:00 app[web.1]:   host: 'folisjs.herokuapp.com',
 2013-09-19T19:39:52.998926+00:00 app[web.1]:   'content-type': 'application/x-www-form-urlencoded',
 2013-09-19T19:39:52.998926+00:00 app[web.1]:   'content-length': '12',
 2013-09-19T19:39:52.998926+00:00 app[web.1]:   connection: 'close',
@@ -58,7 +58,7 @@ Development
 
 ### Running
 
-`node polis.js`
+`node folis.js`
 
 A successful startup will show the following output:
 
@@ -104,11 +104,11 @@ listen to: `PORT=<your port number>` To change the default port, modify
 `listeningPort` in the code.
 
 If you're like me, you'll likely be running another web app, which will be
-listening on $PORT. So when you try to start polis.js, you'll get an error.
+listening on $PORT. So when you try to start folis.js, you'll get an error.
 You can start it up with a custom port from the command line quite easily,
 though.
 
-`PORT=9000 node polis.js`
+`PORT=9000 node folis.js`
 
 ### Status Code
 
