@@ -7,7 +7,7 @@ var secondsToSleep = 0;
 var requests = {}
 var count = 0;
 var requestsToFileTimer;
-var DISK_WRITE_DELAY = 10000;
+var DISK_WRITE_DELAY = 5000;
 
 app.listen(listeningPort);
 
@@ -39,7 +39,9 @@ console.log();
 
 function sendRequestsToFile() {
   console.log("Writing requests to file");
-  fs.mkdirSync('tmp');
+  if (!fs.statSync('tmp').isDirectory()) {
+    fs.mkdirSync('tmp');
+  }
   fs.writeFileSync('tmp/requests.json', JSON.stringify(requests), null, 2);
 
 }
